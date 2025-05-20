@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'Chuvash_Workout/CSS/profile.css' %}">
+    <title>Профиль</title>
+  </head>
+
+<div class="body">
+  <div class="image_block">
+    <div class="image_block2"> <img src="{{user.add.photo.url}}" alt="profile_photo"></div>
+    <div class="image_content">
+      <div class="image_login">{{user}}</div>
+      <div class="email_login">{{user.email}}</div>
+    </div>
+  </div>
+  <div class="profile_block">
+    <div class="content_form">
+      <div class="input_form" style="height:auto;">
+          <form action="" method="post" enctype="multipart/form-data">
+              {% csrf_token %}
+          <input type="hidden" name="next" value="{{next}}">
+        {% for i in form%}
+        <div class="form1 form">
+           <div class="label_div"><label  class="" for="{{i.id_for_label}}">{{i.label}}</label></div>
+   <div class="input_div">{{i}}</div>
+    <div class="form-error">{{ i.errors }}</div>
+          </div>
+          {% endfor %}
+<!--        {% for i in form2 %}-->
+<!--        <div class="form1 form">-->
+<!--           <div class="label_div"><label  class="" for="{{i.id_for_label}}">{{i.label}}</label></div>-->
+<!--   <div class="input_div">{{i}}</div>-->
+<!--    <div class="form-error">{{ i.errors }}</div>-->
+<!--          </div>-->
+<!--          {% endfor %}-->
+
+        </form>
+      </div>
+
+      <div class="button_form">
+        <a href="{% url 'users:update_profile' user.id %}"><button type='submit' name="save">Изменить</button></a>
+        <a href="{%url 'users:password_change'%}"><button type='submit' name="save">Сменить пароль</button></a>
+      </div>
+    </div>
+  </div>
+  <div class="dop_block">
+
+
+    <div class="dop_content_block">
+      <div class="doph"> Контактная информация</div>
+      <div class="dop_contact"></div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+}

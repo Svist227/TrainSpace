@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'Chuvash_Workout/CSS/profile.css' %}">
+    <title>Профиль</title>
+  </head>
+
+<div class="body">
+  <div class="image_block">
+    <div class="image_block2"> <img src="{{user.add.photo.url}}" alt="profile_photo"></div>
+    <div class="image_content">
+      <div class="image_login">{{user}}</div>
+      <div class="email_login">{{user.email}}</div>
+    </div>
+  </div>
+  <div class="profile_block">
+    <div class="content_form">
+      <div class="input_form">
+
+        <div class="form1 form">
+          <div class="label_div"><label for="login">Логин</label>
+          </div>
+          <div class="input_div">
+            <!-- <input type="text" id='login' name="login" value=""> -->
+            <p class="i">{{user}}</p>
+          </div>
+        </div>
+
+        <div class="form2 form">
+          <div class="label_div"><label for="login">Имя</label>
+          </div>
+          <div class="input_div">
+            <!-- <input type="text" id='login' name="login" value=""> -->
+            <p class="i">{{user.first_name}}</p>
+          </div>
+        </div>
+        <div class="form3 form">
+          <div class="label_div"><label for="login">Фамилия</label>
+          </div>
+          <div class="input_div">
+            <!-- <input type="text" id='login' name="login" value=""> -->
+            <p class="i">{{user.last_name}}</p>
+          </div>
+        </div>
+        <div class="form4 form">
+          <div class="label_div"><label for="login">Email</label>
+          </div>
+          <div class="input_div">
+            <!-- <input type="text" id='login' name="login" value=""> -->
+            <p class="i">{{user.email}}</p>
+          </div>
+        </div>
+        <div class="form5 form">
+          <div class="label_div"><label for="login">Дата рождения</label>
+          </div>
+          <div class="input_div">
+            <!-- <input type="text" id='login' name="login" value=""> -->
+            <p class="i">{{user.add.date_bitrh}}</p>
+          </div>
+        </div>
+        <div class="form6 form">
+          <div class="label_div"><label for="login">Дата регистрации</label>
+          </div>
+          <div class="input_div">
+            <!-- <input type="text" id='login' name="login" value=""> -->
+            <p class="i">{{user.date_joined}}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="button_form">
+        <a href="{% url 'users:update_profile' user.id %}"><button type='submit' name="save">Изменить</button></a>
+        <a href="{%url 'users:password_change'%}"><button type='submit' name="save">Сменить пароль</button></a>
+      </div>
+    </div>
+  </div>
+
+</div>
+{% endblock %}

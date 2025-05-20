@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content%}
+<head>
+   <link rel="stylesheet" href="{% static 'Chuvash_Workout/CSS/login.css' %}">
+</head>
+
+    <div class="body">
+
+    <div class="signin">
+      <div class="content">
+        <form action="" method="post" enctype="multipart/form-data">
+          {% csrf_token%}
+         <input type="hidden" name="next" value="{{next}}">
+         <div class="form-error">{{form.non_field_errors}}</div>
+          <h2>Вход</h2>
+            {% for i in form %}
+              <div class="input_box">
+              <p><label  class="form-label" for="{{i.id_for_label}}">{{i.label}}</label>{{i}}</p>
+              <div class="form-error">{{ i.errors }}</div>
+          </div>
+            {% endfor %}
+
+          <div class="links">
+            <a href="../register">Регистрация</a>
+            <a href="{% url 'users:password_reset'%}">Забыли пароль</a>
+          </div>
+          <div class="button_block">
+            <button type="submit" name="enter">Войти</button>
+          </div>
+          </form>
+      </div>
+    </div>
+
+    </div>
+
+{% endblock %}

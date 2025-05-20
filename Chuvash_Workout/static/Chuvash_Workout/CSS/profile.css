@@ -1,0 +1,132 @@
+body{
+margin:0;
+height:120vh;
+}
+.body{
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  grid-template-rows:  3fr 2fr;
+    font-size: 1.5em;
+}
+/* Блок картинки */
+.image_block{
+
+  border-radius: 20px;
+
+
+}
+.image_block2{
+
+  height: 250px;
+  width: 250px;
+  position: relative;
+  top:13%;
+  left:29%;
+  border-radius: 30px;
+}
+.image_block2 img {
+  height:100%;
+  width: 100%;
+  border-radius: 30px;
+}
+.image_content{
+  height: 100px;
+  width: 300px;
+
+  position: relative;
+  left: 25%;
+  top:15%;
+  border-radius: 20px;
+}
+
+.image_login{
+  height: 50%;
+  text-align: center;
+  position: relative;
+  top:20px;
+}
+.email_login{
+  height: 50%;
+  text-align: center;
+  position: relative;
+  top:10px;
+}
+
+
+
+
+/* Блок профиля */
+.profile_block{
+border-width:0 0 0 2px;
+border-style:solid;
+grid-row: -1 /1;
+grid-column: 2/ 3;
+  width:70%;
+margin-left:10%;
+}
+
+.content_form{
+  height: 90%;
+  width: 80%;
+  position: relative;
+  top:5%;
+  left: 10%;
+  border-radius: 20px;
+
+}
+/* Блок инпутов */
+.input_form{
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap:0px;
+  padding: 0;
+
+}
+.input_form .form{
+height: 95px;
+
+}
+.label_div{
+  height: 30%;
+}
+label{
+  line-height: 40px;
+
+}
+.input_div{
+
+  height: 50%;
+}
+input{
+  width: 50%;
+  height: 70%;
+  font-size: 25px;
+  border-radius: 10px;
+}
+.input_div p{
+  width: 50%;
+  height: 70%;
+  font-size: 25px;
+  border-radius: 10px;
+  margin-top:5px;
+  font-weight:700;
+}
+.button_form{
+  display: inline-block;
+  height: 10%;
+  font-size:15px;
+}
+.button_form button{
+  position: relative;
+  top:0%;
+  left:10%;
+  height: 45px;
+  width: 200px;
+  border-radius: 10px;
+  background-color:white;
+}
+
+

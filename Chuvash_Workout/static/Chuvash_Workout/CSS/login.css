@@ -1,0 +1,64 @@
+
+
+
+.body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 100vw;
+    font-size: 1.3em;
+}
+.signin{
+  box-shadow: 0 15px 35px rgba(0,0,0,9);
+  padding: 40px;
+ border-radius: 4px;
+  width: 400px;
+  margin: 100px 0 100px;
+   background: #222;
+
+}
+.content h2{
+  font-size: 2em;
+  padding: 0;
+  text-align: center;
+
+  height: 40px;
+  margin: 0px;
+  color:white;
+}
+.content{
+  position: relative;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   gap: 40px;
+}
+
+.input_box{
+width: 300px;
+padding: 0 30px 0;
+}
+.links{
+  display: flex;
+  gap:100px;
+  padding: 20px 0 20px;
+
+}
+.input_box p input{
+  position: relative;
+ width: 100%;
+ background: #333;
+ border: none;
+ outline: none;
+ padding: 25px 10px 7.5px;
+ border-radius: 4px;
+ color: #fff;
+ font-weight: 500;
+ font-size: 1em;
+}
+button{
+transform: translateX(40%);
+}

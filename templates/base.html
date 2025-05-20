@@ -1,0 +1,78 @@
+{%load static%}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная страница</title>
+    <link rel = 'stylesheet' href="{% static 'Chuvash_Workout/CSS/workout_main.css' %}" >
+    <link rel="stylesheet" href="{% static 'Chuvash_Workout/CSS/font-awesome.min.css' %}">
+   <link rel = 'stylesheet' href="{% static 'Chuvash_Workout/CSS/main.css' %}" >  
+   <link rel = 'stylesheet' href="{% static 'Chuvash_Workout/CSS/reviews.css' %}" >
+
+</head>
+<body>
+<div class="additional_section"></div>
+<nav >
+  <div class="logo"><a href="{% url 'main' %}"><img src="{% static 'Chuvash_Workout/images/workout.png' %}" alt="logo"></a>
+  </div>
+  <ul class="na">
+      <li class="nav"> <a class="n" href="{% url 'main' %}">Главная</a></li>
+      {% if user.is_authenticated%}
+    <li class="nav"><a class="n" href="{% url 'users:logout'%}">Выйти</a></li>
+    {%else%}
+    <li class="nav"><a class="n" href="{% url 'users:login' %}">Вход</a></li>
+    {% endif %}
+       <li class="nav dropdown">
+         <a class="n dropbtn "href="../#programs">Программы тренировок</a>
+         <div class="dropdown-content">
+            <a href="../#programs1">Тренировка Базы</a>
+           <a href="../#programs3">Тренировка Динамики</a>
+           <a href="../#programs2">Тренировка Статики</a>
+
+          </div>
+       </li>
+
+     <li class="nav"> <a class="n" href="{% url 'about' %}">Об авторе</a></li>
+      <li class="nav"> <a class="n" href="../#questions">Частые вопросы</a></li>
+     <li class="nav"> <a class="n" href="{% url 'review' %}"> Отзывы</a></li>
+     <li class="nav prof"> <a class="n" href="{% url 'profile' %}">Профиль: {{user.username}}</a></li>
+  </ul>
+</nav>
+
+{% block content %} {% endblock%}
+
+<footer>
+    <div class="foot_info">
+      <h2>Меню</h2>
+      <ul>
+        <li class="l"> <a class="n" href="{% url 'main' %}">Главная страница</a></li>
+        <li class="l"> <a class="" href="{% url 'users:login' %}">Вход | Регистрация</a></li>
+         <li class="l"> <a class=""href="{% url 'programs' %}">Программы тренировок</a></li>
+        <li class="l"> <a class="" href="{% url 'about' %}">Об авторе</a></li>
+        <li class="l"> <a class="" href="http://127.0.0.1:8000/#questions">Частые вопросы</a></li>
+        <li class="l"> <a class="" href="{% url 'review' %}"> Отзывы</a></li>
+        <li class="l"> <a class="" href="{% url 'profile' %}">Профиль</a></li>
+      </ul>
+    </div>
+    <div class="foot_info">
+      <h2>О сайте</h2>
+      <ul>
+        <li><p>Workout тренировки</p></li>
+        <li><p>Без железа</p></li>
+        <li><p>Беcплатно</p></li>
+        <li><p>В любом месте, даже на кухне</p></li>
+          <li><p>Эффективно</p></li>
+      </ul>
+    </div>
+    <div class="foot_info">
+        <h2>Контакты</h2>
+    <ul class="icon" >
+        <li class="f"><a href="https://vk.com/romadanilov2"><i class="fa fa-vk" aria-hidden="true"></i> </a></li>
+        <li class="f"><a href="https://t.me/Artembo28"><i class="fa fa-telegram" aria-hidden="true"></i></a></li>
+        <li class="f"><a href="https://wa.me/+79176628871"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
+        <li class="f"><a href="https://vk.com/romadanilov2"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+    </ul>
+</div>
+</footer>
+
+</body>
+</html>

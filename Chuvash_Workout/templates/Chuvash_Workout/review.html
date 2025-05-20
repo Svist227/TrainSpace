@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Отзывы</h1>
+<section class="reviews">
+{% for i in page_obj%}  
+        <div class="reviews__element">
+            <div class="reviews__element-title">
+                <div class="h3">{{i}}</div>
+            </div>
+            <div class="reviews__element-description">
+                <p>{{i.reviews}}</p>
+            </div>
+        </div>
+
+{% endfor %}
+</section>
+
+<div class="pagination">
+    {% for i in page_obj.paginator.page_range %}
+<ul class="pagination-container">
+    <li class="pagination-element"><a href="?page={{i}}">{{i}}</a></li>
+</ul>
+    {%endfor%}
+</div>
+
+<!-- если есть права на добавление контента -->
+{% if perms.Chuvash_Workout.add_reviews %} 
+<h1><label for="rev" class="rew">Напишите свой отзыв</label></h1>
+<div class="main-info" id="review"> 
+    <form class="form-review" method="post">
+        {% csrf_token %}
+        
+        <textarea name="reviews" id="rev" cols="50" rows="10" placeholder="Мне нравится..." ></textarea>
+        <button type="submit">Отправить</button>
+        
+    </form>
+</div>
+  {% endif %}
+{% endblock %}

@@ -1,0 +1,23 @@
+body, html{
+background: rgb(25,23,207);
+background: linear-gradient(25deg, rgba(25,23,207,1) 0%, rgba(68,80,171,1) 24%, rgba(122,44,144,1) 55%, rgba(149,32,188,1) 100%);
+}
+
+* {
+margin:0px;
+padding:0px;
+box-sizing:border-box
+}
+#content-related{
+background: rgb(63,201,128);
+background: linear-gradient(25deg, rgba(63,201,128,1) 20%, rgba(1,165,227,1) 60%, rgba(17,227,221,1) 100%);
+}
+
+#header {
+background: rgb(227,84,84);
+background: linear-gradient(25deg, rgba(227,84,84,1) 12%, rgba(190,193,70,1) 41%, rgba(225,226,29,1) 85%);
+}
+.module caption {
+background: rgb(25,23,207);
+background: linear-gradient(25deg, rgba(25,23,207,1) 0%, rgba(68,80,171,1) 24%, rgba(122,44,144,1) 55%, rgba(149,32,188,1) 100%);
+}

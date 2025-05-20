@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+{%load static%}
+{% block content%}
+<div class="back-image"></div>
+<head>
+      <link rel="stylesheet" href="{% static 'Chuvash_Workout/CSS/main.css' %}">
+
+</head>
+<div class="cont_main_iname">
+<div class="back-image"></div>
+<div class="content_main">
+  <h1 class="main_title">Workout тренировки</h1>
+  <ul class ='main_ul'>
+    <li class="main_li">Без железа</li>
+    <li class="main_li">С собственным весом</li>
+    <li class="main_li">В любом месте</li>
+    <li class="main_li">В любое время</li>
+  </ul>
+  <div class="main_button">
+      <a href="#programs"><button type="reset" name="button" class="button">Программы</button></a>
+      <div class="arrow"></div>
+  </div>
+
+</div>
+</div>
+
+
+
+<div class="programs"id=programs>
+  <div class="base prog " id=programs1>
+    <div class="prog2 left_prog">   <div class="image_prog prog3"><img class="img_programs" src="{% static 'Chuvash_Workout/images/base.jpg' %}" alt="Тренировка базы"></div>
+      <div class="prog3"> <button type='submit' name="buy_button">Купить</button>
+      </div></div>
+    <div class="content prog2 right_prog">
+      <div class="prog_title">Тренировка базы</div>
+      <div class="prog_paragrath">Хочешь прокачать свое тело используя пол, турник и брусья? Тогда эта программа тебе подходит. 30 минутная тренировка, прокачка всех целевых мыщц, хорошое настроение тебе обеспечено</div>
+    </div>
+
+  </div>
+  <div class="static prog"id=programs2>
+    <div class="left_prog prog2">  <div class="image_prog prog3 "><img class="static_image img_programs" src="{% static 'Chuvash_Workout/images/static.jpg' %}" alt="Тренировка Статики"></div>
+      <div class="prog3"> <button type='submit' name="buy_button">Купить</button>
+      </div></div>
+      <div class="content prog2 right_prog">
+        <div class="prog_title">Тренировка Статики</div>
+        <div class="prog_paragrath">Хочешь научиться владеть стойкой на руках? А тем более отжиматься в ней, то тебе точно сюда. Мощные плечи, руки тебе обеспечены</div>
+      </div>
+  </div>
+  <div class="dinamic prog"id=programs3>
+    <div class="left_prog prog2">  <div class="image_prog prog3"><img class="img_programs" src="{% static 'Chuvash_Workout/images/dinamic.jpg' %}" alt="Тренировка Динамики"></div>
+      <div class="prog3"> <button type='submit' name="buy_button">Купить</button>
+      </div></div>
+      <div class="content prog2 right_prog">
+        <div class="prog_title">Тренировка Динамики</div>
+        <div class="prog_paragrath">Хочешь наконец выучить что-нибудь интереснее топорика, то тебе подойдет этот курс. Здесь ты научишься базвоым динамическим элементам, в том числе и солнышко.</div>
+      </div>
+  </div>
+
+  <div class="coming_soon prog"id=programs4>
+    <div class="left_prog prog2">  <div class="image_prog prog3"><img class="img_programs" src="{% static 'Chuvash_Workout/images/coming_soon.webp' %}" alt="Скоро..."></div>
+      <div class="prog3"> <button type='submit' name="buy_button">Купить</button>
+      </div></div>
+      <div class="content prog2 right_prog">
+        <div class="prog_title">Coming soon</div>
+        <div class="prog_paragrath">Скоро в продаже</div>
+      </div>
+  </div>
+</div>
+
+<div class ='cont_youtube'>
+  <h1>Бесплатная вводная тренировка</h1>
+<div class="youtube">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/SUVKvkf1NSE?si=VILbUDx1NBaN-ni0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+  </div>
+
+<div class="FAQ">
+  <h1 class="FAQh" id="questions">Частые вопросы</h1>
+  <details class="details" >
+  <summary>Стоит ли покупать курсы с 0-ой подготовкой? </summary>
+  <p class="faq_content">Тренировка базы и Статики да, стоит. По началу будет тяжело, главное не сдававться.</p>
+  </details>
+  <details >
+    <summary>Сколько длятся курсы по времени</summary>
+    <p class="faq_content"> У них нет точного ограничения по времени. Вы можете прогрессировать как пару месяцев, так и пару лет. Все зависит от желания.</p>
+  </details>
+  <details >
+    <summary>Какие элементы я изучу по - Тренировка Статики? </summary>
+    <p class="faq_content">На данный момент с помощью данного курса вы сможете изучить Идеальную стойку на руках и ее вариации. И отжимания в стойке.</p>
+  </details>
+  <details >
+    <summary>Что делать если нет прогресса? </summary>
+    <p class="faq_content">Если вы вдруг замечаете такое, то на это есть несколько факторов: сон, питание, стресс, процент кислорода в крови... Вы всегда можете проконсультироваться со мной, мои контакты указаны а шапке и в нижней части экрана</p>
+  </details>
+</div>
+
+
+
+{% endblock %}

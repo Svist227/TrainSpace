@@ -1,0 +1,71 @@
+
+
+a:hover{
+   color: rgb(0 255 255);
+}
+
+.sear{
+  width: 30px;
+  display: inline-flex;
+  margin: 30px;
+}
+body{
+  background-color: #DCEAF3;
+}
+
+
+.contact{
+  display: inline-flex;
+}
+
+.Отзыв{
+  padding-left: 0px;
+  color: red;
+  display: block;
+}
+
+td{
+display:inline-table;
+  height: 50px;
+  width: 80px;
+}
+html{
+scroll-behavior: smooth;
+/* Плавный переход при нажатии на якорь */
+}
+.na{
+  list-style-type: none;
+  height:40px;
+}
+.fa{
+
+  font-size: 3em;
+
+}
+footer  ul{
+  display: flex;
+  column-gap:30px;
+}
+
+
+#review{
+  background-color: rgba(255, 0, 0, 0.5);
+  height:  300px;
+}
+
+[name ='reviews']{
+  width: 600px;
+  height: 200px;
+}
+
+div{
+  font-style: 3em;
+}
+.main-photo{
+
+  height:300px;
+
+}
+
+
+

@@ -1,0 +1,236 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial';
+  background-color: #ccd6eb;
+  scroll-behavior: smooth;
+
+
+}
+body a:hover{
+  color:rgb(0,255,255);
+}
+
+
+/* Главный экран */
+/* Меню фикс  дубль*/
+
+.back-image{
+  background-image: url('../images/pull-ups.jpg');
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+
+  background-size: cover;
+  background-position: center;
+  filter: brightness(50%)  ;
+  position: absolute;
+  z-index: 1;
+  opacity: 70%;
+
+}
+
+.cont_main_iname{
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+.content_main{
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;;
+  justify-content: center;
+  align-items: center;
+  color:white;
+  transform:translateY(-60px);
+}
+.main_title{
+  font-size: 5em;
+  margin: 0;
+}
+
+.main_ul{
+  display: flex;
+  gap:40px;
+  font-size: 2.5em;
+}
+.main_li{
+  list-style-type:none;
+  font-weight: 500;
+}
+.arrow{
+  transform: translateY(-40px);
+
+
+}
+button{
+  height: 50px;
+  width: 200px;
+  font-size: 1.3em;
+  text-align: center;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.button{
+  background-color: white;
+  font-weight: 600;
+}
+
+.main_button{
+  display: flex;
+  color: rgb(0,255,255);
+}
+
+
+.arrow{
+  content: url('../images/arrow.svg');
+  height:auto;
+  width: 100px;
+
+}
+/* Программы тренировок */
+.programs{
+  height: auto;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 50vw 50vw;
+}
+.prog{
+  /*border: 1px solid rgb(84, 236, 247);*/
+  display: grid;
+  grid-template-columns: 40% auto;
+}
+.prog2{
+  /* border-right:  2.5px solid lightblue; */
+}
+.left_prog{
+  display: grid;
+  grid-template-rows: 3fr 1fr;
+  justify-content: center;
+  align-items: center;
+}
+[name=buy_button]{
+  width: 150px;
+  height: 40px;
+  background-color: white;
+  font-weight: 600;
+  border-radius: 10px;
+
+}
+.prog3{
+    overflow: hidden;
+    text-align: center;
+}
+.img_programs{
+  display: block;
+  width: 250px;
+padding-top: 48px;
+height: 300px;
+border-radius: 10px;
+}
+.static_image{
+  scale:1.7;
+  transform: translateY(50px);
+
+}
+
+.content.prog2{
+weight:
+
+}
+.prog_title{
+  text-align: center;
+  font-size: 2.5em;
+  height: 30%;
+}
+.prog_paragrath{
+
+}
+
+/* Частые вопросы */
+.FAQ{
+  height: 100vh;
+  width: 100vw;
+}
+.FAQh{
+  text-align: center;
+  font-size: 3em;
+  line-height: 100px;
+}
+details{
+  position: relative;
+   top: 10%;
+   left: 25%;
+   max-width: 750px;
+   margin-bottom: 10px;
+   background-color: lightblue;
+   border-radius: 5px;
+   overflow: hidden;
+    background-color: rgba(51, 53, 54, 0.5);
+  color: white;
+
+
+
+ }
+ details::after {
+  position: absolute;
+  right: 24px;
+  top: 8px;
+  content: "+";
+  width: 15px;
+  height: 20px;
+  font-size: 2em;
+}
+
+
+
+summary{
+  height: 30px;
+  list-style: none;
+  font-size: 27px;
+  position: relative;
+  cursor: pointer;
+  background-color: rgb(51, 53, 54);
+   padding:12px 24px;
+}
+.faq_content{
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 18px;
+  margin: 30px 10px 50px;
+}
+
+.youtube{
+position:relative;
+top:25px;
+
+}
+
+.cont_youtube{
+display:flex;
+justify-content: center;
+align-items:center;
+flex-direction:column;
+font-size:24px;
+}
+
+.youtube::after{
+content:'';
+position:absolute;
+top:100px;
+right:-160px;
+width:100px;
+height:100px;
+background-image: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20id%3D%22SVGRepo_bgCarrier%22%20stroke-width%3D%220%22%3E%3C/g%3E%3Cg%20id%3D%22SVGRepo_tracerCarrier%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3C/g%3E%3Cg%20id%3D%22SVGRepo_iconCarrier%22%3E%20%3Cpath%20d%3D%22M8%2010L8%2014L6%2014L-2.62268e-07%208L6%202L8%202L8%206L16%206L16%2010L8%2010Z%22%20fill%3D%22%23000000%22%3E%3C/path%3E%20%3C/g%3E%3C/svg%3E');
+}
+.youtube::before{
+content:'';
+position:absolute;
+top:100px;
+right:625px;
+width:100px;
+height:100px;
+background-image: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20id%3D%22SVGRepo_bgCarrier%22%20stroke-width%3D%220%22%3E%3C/g%3E%3Cg%20id%3D%22SVGRepo_tracerCarrier%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3C/g%3E%3Cg%20id%3D%22SVGRepo_iconCarrier%22%3E%20%3Cpath%20d%3D%22M8%206L8%202L10%202L16%208L10%2014L8%2014L8%2010L-1.74845e-07%2010L-3.01991e-07%206L8%206Z%22%20fill%3D%22%23000000%22%3E%3C/path%3E%20%3C/g%3E%3C/svg%3E');}

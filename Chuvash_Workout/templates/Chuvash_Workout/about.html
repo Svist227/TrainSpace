@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content%}
+
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="{% static 'Chuvash_Workout/CSS/about.css' %}">
+
+  </head>
+<div class="body">
+  <div class="image_block">
+    <div class="image_block2">
+      <img  class="image" src="{% static 'Chuvash_Workout/images/author_photo.jpg' %}" alt="about">
+    </div>
+  </div>
+  <div class="content_block">
+    <h1>Об авторе</h1>
+    <h3> Роман - workout тренер & full stuck developer</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nulla mauris, porttitor eget scelerisque vitae, ultrices at lorem. Suspendisse lobortis nisi vitae commodo tempus. Nam rhoncus non augue et vulputate. Donec facilisis maximus ligula congue consectetur. Cras aliquet tortor tristique eros tincidunt, a commodo dui pharetra. Sed luctus justo ac iaculis rutrum. Donec volutpat justo et mauris fermentum, eget bibendum erat vulputate. Curabitur eget odio a nunc fringilla vehicula. Donec eget velit fringilla, ultricies nibh ac, consectetur felis. Quisque vitae cursus quam, vitae tincidunt erat.</p>
+    <div >
+      <ul class="social"  >
+          <li class="f"><a href="https://vk.com/romadanilov2"><i class="fa fa-vk" aria-hidden="true"></i> </a></li>
+          <li class="f"><a href="https://t.me/Artembo28"><i class="fa fa-telegram" aria-hidden="true"></i></a></li>
+          <li class="f"><a href="https://wa.me/+79176628871"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
+          <li class="f"><a href="https://www.youtube.com/@Workouthome1"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

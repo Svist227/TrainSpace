@@ -1,0 +1,19 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+
+<h1></h1>
+<!--{% if title.slug == 'base' or title.slug == 'static' or title.slug == 'dynamic' or title.slug == 'standhand' %}-->
+<h1>Здесь будут находится базовые упражнения<h1>
+    <h1>{{title}} - Базовые тренировки</h1>
+    <h3>В данной тренировке будут задействованы упражнения: {{title.content}}</h3>
+<h3>{{title.main_description}}</h3>
+<p><strong>Уровень Beginner: </strong>{{title.description1}}</p>
+<p><strong>Уровень Advanced: </strong>{{title.description2}}</p>
+
+
+{%endif%}
+
+
+{% endblock %}
